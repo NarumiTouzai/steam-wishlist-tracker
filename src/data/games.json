@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T16:41:10.280Z",
+  "updatedAt": "2026-08-29T17:03:52.695Z",
   "sourceChannelId": "1523002540302667879",
   "totalCandidates": 10,
   "unavailableCount": 0,
@@ -11,6 +11,11 @@
       "storeUrl": "https://store.steampowered.com/app/1574480",
       "releaseDate": "2026年8月11日",
       "comingSoon": false,
+      "genres": [
+        "アクション",
+        "アドベンチャー",
+        "インディー"
+      ],
       "price": {
         "isFree": false,
         "currency": "JPY",
@@ -30,6 +35,16 @@
         "appid": "1574480",
         "firstSeenAt": "2026-08-28T15:53:50.413000+00:00",
         "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1542925185609367643"
+      },
+      "priceHistory": {
+        "points": [
+          {
+            "date": "2026-08-29",
+            "final": 277200
+          }
+        ],
+        "lowestFinal": 277200,
+        "lowestDate": "2026-08-29"
       }
     },
     {
@@ -39,6 +54,13 @@
       "storeUrl": "https://store.steampowered.com/app/2232840",
       "releaseDate": "2023年1月6日",
       "comingSoon": false,
+      "genres": [
+        "アクション",
+        "アドベンチャー",
+        "カジュアル",
+        "インディー",
+        "無料プレイ"
+      ],
       "price": {
         "isFree": true,
         "discountPercent": 0
@@ -46,9 +68,9 @@
       "reviews": {
         "scoreDesc": "Mixed",
         "scoreLabelJa": "賛否両論",
-        "totalPositive": 7277,
+        "totalPositive": 7278,
         "totalNegative": 6178,
-        "totalReviews": 13455,
+        "totalReviews": 13456,
         "percentPositive": 54
       },
       "discord": {
@@ -64,6 +86,12 @@
       "storeUrl": "https://store.steampowered.com/app/2436940",
       "releaseDate": "2026年7月31日",
       "comingSoon": false,
+      "genres": [
+        "アクション",
+        "アドベンチャー",
+        "インディー",
+        "RPG"
+      ],
       "price": {
         "isFree": false,
         "currency": "JPY",
@@ -74,15 +102,25 @@
       "reviews": {
         "scoreDesc": "Very Positive",
         "scoreLabelJa": "非常に好評",
-        "totalPositive": 10633,
-        "totalNegative": 653,
-        "totalReviews": 11286,
+        "totalPositive": 10635,
+        "totalNegative": 654,
+        "totalReviews": 11289,
         "percentPositive": 94
       },
       "discord": {
         "appid": "2436940",
         "firstSeenAt": "2026-08-20T13:52:54.236000+00:00",
         "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1539995648072360098"
+      },
+      "priceHistory": {
+        "points": [
+          {
+            "date": "2026-08-29",
+            "final": 170000
+          }
+        ],
+        "lowestFinal": 170000,
+        "lowestDate": "2026-08-29"
       }
     },
     {
@@ -92,6 +130,9 @@
       "storeUrl": "https://store.steampowered.com/app/1478500",
       "releaseDate": "2026年8月4日",
       "comingSoon": false,
+      "genres": [
+        "アドベンチャー"
+      ],
       "price": {
         "isFree": false,
         "currency": "JPY",
@@ -111,6 +152,16 @@
         "appid": "1478500",
         "firstSeenAt": "2026-08-10T22:46:33.436000+00:00",
         "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1536506067675259032"
+      },
+      "priceHistory": {
+        "points": [
+          {
+            "date": "2026-08-29",
+            "final": 230000
+          }
+        ],
+        "lowestFinal": 230000,
+        "lowestDate": "2026-08-29"
       }
     },
     {
@@ -120,6 +171,11 @@
       "storeUrl": "https://store.steampowered.com/app/4244510",
       "releaseDate": "2026年4月20日",
       "comingSoon": false,
+      "genres": [
+        "アクション",
+        "アドベンチャー",
+        "インディー"
+      ],
       "price": {
         "isFree": false,
         "currency": "JPY",
@@ -139,6 +195,16 @@
         "appid": "4244510",
         "firstSeenAt": "2026-07-20T13:56:34.789000+00:00",
         "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1528762549305086053"
+      },
+      "priceHistory": {
+        "points": [
+          {
+            "date": "2026-08-29",
+            "final": 88000
+          }
+        ],
+        "lowestFinal": 88000,
+        "lowestDate": "2026-08-29"
       }
     },
     {
@@ -148,6 +214,10 @@
       "storeUrl": "https://store.steampowered.com/app/3583210",
       "releaseDate": "2026年5月28日",
       "comingSoon": false,
+      "genres": [
+        "カジュアル",
+        "インディー"
+      ],
       "price": {
         "isFree": false,
         "currency": "JPY",
@@ -167,6 +237,16 @@
         "appid": "3583210",
         "firstSeenAt": "2026-07-12T13:11:48.109000+00:00",
         "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1525852177627615272"
+      },
+      "priceHistory": {
+        "points": [
+          {
+            "date": "2026-08-29",
+            "final": 57000
+          }
+        ],
+        "lowestFinal": 57000,
+        "lowestDate": "2026-08-29"
       }
     },
     {
@@ -176,6 +256,12 @@
       "storeUrl": "https://store.steampowered.com/app/512900",
       "releaseDate": "2019年7月12日",
       "comingSoon": false,
+      "genres": [
+        "アクション",
+        "アドベンチャー",
+        "インディー",
+        "RPG"
+      ],
       "price": {
         "isFree": false,
         "currency": "JPY",
@@ -195,6 +281,16 @@
         "appid": "512900",
         "firstSeenAt": "2026-07-05T02:48:01.518000+00:00",
         "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1523158484068204735"
+      },
+      "priceHistory": {
+        "points": [
+          {
+            "date": "2026-08-29",
+            "final": 230000
+          }
+        ],
+        "lowestFinal": 230000,
+        "lowestDate": "2026-08-29"
       }
     },
     {
@@ -204,6 +300,11 @@
       "storeUrl": "https://store.steampowered.com/app/958520",
       "releaseDate": "2026年6月10日",
       "comingSoon": false,
+      "genres": [
+        "アクション",
+        "インディー",
+        "MM（Massively Multiplayer）"
+      ],
       "price": {
         "isFree": false,
         "currency": "JPY",
@@ -223,6 +324,16 @@
         "appid": "958520",
         "firstSeenAt": "2026-07-04T16:29:16.357000+00:00",
         "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1523002769856794624"
+      },
+      "priceHistory": {
+        "points": [
+          {
+            "date": "2026-08-29",
+            "final": 188700
+          }
+        ],
+        "lowestFinal": 188700,
+        "lowestDate": "2026-08-29"
       }
     },
     {
@@ -232,6 +343,12 @@
       "storeUrl": "https://store.steampowered.com/app/2445690",
       "releaseDate": "2026年6月10日",
       "comingSoon": false,
+      "genres": [
+        "アクション",
+        "アドベンチャー",
+        "インディー",
+        "RPG"
+      ],
       "price": {
         "isFree": false,
         "currency": "JPY",
@@ -242,8 +359,8 @@
       "reviews": {
         "scoreDesc": "Mostly Positive",
         "scoreLabelJa": "やや好評",
-        "totalPositive": 10736,
-        "totalNegative": 3064,
+        "totalPositive": 10737,
+        "totalNegative": 3063,
         "totalReviews": 13800,
         "percentPositive": 78
       },
@@ -251,6 +368,16 @@
         "appid": "2445690",
         "firstSeenAt": "2026-07-04T16:28:48.007000+00:00",
         "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1523002650948538379"
+      },
+      "priceHistory": {
+        "points": [
+          {
+            "date": "2026-08-29",
+            "final": 200000
+          }
+        ],
+        "lowestFinal": 200000,
+        "lowestDate": "2026-08-29"
       }
     },
     {
@@ -260,6 +387,12 @@
       "storeUrl": "https://store.steampowered.com/app/1167630",
       "releaseDate": "2022年4月21日",
       "comingSoon": false,
+      "genres": [
+        "アクション",
+        "インディー",
+        "シミュレーション",
+        "ストラテジー"
+      ],
       "price": {
         "isFree": false,
         "currency": "JPY",
@@ -270,15 +403,25 @@
       "reviews": {
         "scoreDesc": "Overwhelmingly Positive",
         "scoreLabelJa": "圧倒的に好評",
-        "totalPositive": 129827,
+        "totalPositive": 129828,
         "totalNegative": 5636,
-        "totalReviews": 135463,
+        "totalReviews": 135464,
         "percentPositive": 96
       },
       "discord": {
         "appid": "1167630",
         "firstSeenAt": "2026-07-04T16:28:31.396000+00:00",
         "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1523002581276823632"
+      },
+      "priceHistory": {
+        "points": [
+          {
+            "date": "2026-08-29",
+            "final": 396000
+          }
+        ],
+        "lowestFinal": 396000,
+        "lowestDate": "2026-08-29"
       }
     }
   ]

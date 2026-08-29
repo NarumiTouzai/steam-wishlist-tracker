@@ -5,9 +5,11 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fetchSteamAppIdsFromDiscord } from './fetchDiscordSteamLinks.mjs';
 import { fetchAllGameInfo } from './fetchSteamData.mjs';
+import { loadHistory, saveHistory, updateHistory, attachHistory } from './priceHistory.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = join(__dirname, '..', 'src', 'data', 'games.json');
+const HISTORY_PATH = join(__dirname, '..', 'src', 'data', 'priceHistory.json');
 
 async function main() {
   if (!process.env.DISCORD_BOT_TOKEN || !process.env.DISCORD_CHANNEL_ID) {
@@ -28,12 +30,16 @@ async function main() {
     },
   });
 
-  const games = gameInfos
+  const gamesWithoutHistory = gameInfos
     .filter((info) => !info.unavailable)
     .map((info) => ({
       ...info,
       discord: discordEntries.get(String(info.appid)),
     }));
+
+  const history = updateHistory(await loadHistory(HISTORY_PATH), gamesWithoutHistory);
+  await saveHistory(HISTORY_PATH, history);
+  const games = gamesWithoutHistory.map((game) => attachHistory(history, game));
 
   const output = {
     updatedAt: new Date().toISOString(),
