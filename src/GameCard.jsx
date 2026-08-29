@@ -34,7 +34,7 @@ function Sparkline({ points }) {
   );
 }
 
-export default function GameCard({ game, hidden, onToggleHidden }) {
+export default function GameCard({ game, hidden, onToggleHidden, showGraph }) {
   const { name, headerImage, storeUrl, price, reviews, comingSoon, releaseDate, genres, priceHistory } = game;
   const onSale = price && !price.isFree && price.discountPercent > 0;
   const tone = reviewTone(reviews?.scoreLabelJa);
@@ -80,11 +80,11 @@ export default function GameCard({ game, hidden, onToggleHidden }) {
             </p>
           )}
 
-          {priceHistory?.points?.length === 1 && (
+          {showGraph && priceHistory?.points?.length === 1 && (
             <p className="game-card__history-pending">価格推移: 記録中（データが貯まり次第グラフ表示）</p>
           )}
 
-          <Sparkline points={priceHistory?.points} />
+          {showGraph && <Sparkline points={priceHistory?.points} />}
 
           {reviews && (
             <div className={`review review--${tone}`}>
