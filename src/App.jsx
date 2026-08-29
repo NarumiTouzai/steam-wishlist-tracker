@@ -4,6 +4,7 @@ import GameCard from './GameCard.jsx';
 import './App.css';
 
 const HIDDEN_KEY = 'wishlist:hiddenAppIds';
+const SHOW_GRAPH_KEY = 'wishlist:showGraph';
 
 function loadHidden() {
   try {
@@ -11,6 +12,10 @@ function loadHidden() {
   } catch {
     return new Set();
   }
+}
+
+function loadShowGraph() {
+  return localStorage.getItem(SHOW_GRAPH_KEY) !== 'false';
 }
 
 const SORTS = {
@@ -53,10 +58,15 @@ export default function App() {
   const [genre, setGenre] = useState('');
   const [hiddenIds, setHiddenIds] = useState(loadHidden);
   const [showHidden, setShowHidden] = useState(false);
+  const [showGraph, setShowGraph] = useState(loadShowGraph);
 
   useEffect(() => {
     localStorage.setItem(HIDDEN_KEY, JSON.stringify([...hiddenIds]));
   }, [hiddenIds]);
+
+  useEffect(() => {
+    localStorage.setItem(SHOW_GRAPH_KEY, String(showGraph));
+  }, [showGraph]);
 
   function toggleHidden(appid) {
     setHiddenIds((prev) => {
@@ -137,6 +147,10 @@ export default function App() {
             <input type="checkbox" checked={showHidden} onChange={(e) => setShowHidden(e.target.checked)} />
             興味なしを表示（{hiddenIds.size}件）
           </label>
+          <label className="controls__toggle">
+            <input type="checkbox" checked={showGraph} onChange={(e) => setShowGraph(e.target.checked)} />
+            価格推移グラフを表示
+          </label>
         </div>
       </div>
 
@@ -150,6 +164,7 @@ export default function App() {
               game={game}
               hidden={hiddenIds.has(game.appid)}
               onToggleHidden={() => toggleHidden(game.appid)}
+              showGraph={showGraph}
             />
           ))}
         </div>
