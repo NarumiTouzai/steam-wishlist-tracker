@@ -46,17 +46,6 @@ export default function GameCard({ game, hidden, onToggleHidden }) {
 
   return (
     <div className={`game-card ${hidden ? 'game-card--hidden' : ''}`}>
-      <button
-        type="button"
-        className="game-card__hide-btn"
-        onClick={(e) => {
-          e.preventDefault();
-          onToggleHidden();
-        }}
-        title={hidden ? 'リストに戻す' : '興味なしにする'}
-      >
-        {hidden ? '↺ 戻す' : '✕'}
-      </button>
       <a className="game-card__link" href={storeUrl} target="_blank" rel="noreferrer">
         <div className="game-card__image-wrap">
           <img className="game-card__image" src={headerImage} alt={name} loading="lazy" />
@@ -105,6 +94,9 @@ export default function GameCard({ game, hidden, onToggleHidden }) {
           )}
         </div>
       </a>
+      <button type="button" className="game-card__hide-btn" onClick={onToggleHidden}>
+        {hidden ? '↺ リストに戻す' : '✕ 興味なしにする'}
+      </button>
     </div>
   );
 }

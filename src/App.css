@@ -129,22 +129,28 @@
 }
 
 .game-card__hide-btn {
-  position: absolute;
-  z-index: 1;
-  top: 40px;
-  right: 8px;
-  background: rgba(10, 20, 32, 0.75);
-  border: 1px solid var(--border);
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--border);
   color: var(--text);
-  border-radius: 3px;
-  padding: 2px 8px;
+  opacity: 0.7;
+  padding: 8px 12px;
   font-size: 12px;
+  text-align: center;
   cursor: pointer;
 }
 
 .game-card__hide-btn:hover {
-  border-color: var(--accent);
+  opacity: 1;
+  background: var(--bg);
   color: var(--accent);
+}
+
+.game-card--hidden .game-card__hide-btn {
+  color: var(--accent);
+  opacity: 1;
 }
 
 .game-card__image-wrap {
