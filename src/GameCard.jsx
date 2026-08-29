@@ -80,6 +80,10 @@ export default function GameCard({ game, hidden, onToggleHidden }) {
             </p>
           )}
 
+          {priceHistory?.points?.length === 1 && (
+            <p className="game-card__history-pending">価格推移: 記録中（データが貯まり次第グラフ表示）</p>
+          )}
+
           <Sparkline points={priceHistory?.points} />
 
           {reviews && (
