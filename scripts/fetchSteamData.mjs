@@ -82,6 +82,7 @@ export async function fetchGameInfo(appid) {
     storeUrl: `https://store.steampowered.com/app/${appid}`,
     releaseDate: details.release_date?.date ?? null,
     comingSoon: details.release_date?.coming_soon ?? false,
+    genres: details.genres?.map((g) => g.description) ?? [],
     price: priceInfo,
     reviews: reviews
       ? {

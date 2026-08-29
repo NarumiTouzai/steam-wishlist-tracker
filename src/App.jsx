@@ -1,7 +1,17 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import data from './data/games.json';
 import GameCard from './GameCard.jsx';
 import './App.css';
+
+const HIDDEN_KEY = 'wishlist:hiddenAppIds';
+
+function loadHidden() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(HIDDEN_KEY) ?? '[]'));
+  } catch {
+    return new Set();
+  }
+}
 
 const SORTS = {
   discount: {
@@ -32,17 +42,48 @@ function formatUpdatedAt(iso) {
   });
 }
 
+const ALL_GENRES = [...new Set(data.games.flatMap((g) => g.genres ?? []))].sort((a, b) =>
+  a.localeCompare(b, 'ja'),
+);
+
 export default function App() {
   const [sortKey, setSortKey] = useState('discount');
   const [saleOnly, setSaleOnly] = useState(false);
+  const [search, setSearch] = useState('');
+  const [genre, setGenre] = useState('');
+  const [hiddenIds, setHiddenIds] = useState(loadHidden);
+  const [showHidden, setShowHidden] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem(HIDDEN_KEY, JSON.stringify([...hiddenIds]));
+  }, [hiddenIds]);
+
+  function toggleHidden(appid) {
+    setHiddenIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(appid)) next.delete(appid);
+      else next.add(appid);
+      return next;
+    });
+  }
 
   const games = useMemo(() => {
     let list = data.games;
     if (saleOnly) {
       list = list.filter((g) => g.price && !g.price.isFree && g.price.discountPercent > 0);
     }
+    if (genre) {
+      list = list.filter((g) => g.genres?.includes(genre));
+    }
+    if (search.trim()) {
+      const q = search.trim().toLowerCase();
+      list = list.filter((g) => g.name.toLowerCase().includes(q));
+    }
+    if (!showHidden) {
+      list = list.filter((g) => !hiddenIds.has(g.appid));
+    }
     return [...list].sort(SORTS[sortKey].compare);
-  }, [sortKey, saleOnly]);
+  }, [sortKey, saleOnly, genre, search, showHidden, hiddenIds]);
 
   const saleCount = data.games.filter(
     (g) => g.price && !g.price.isFree && g.price.discountPercent > 0,
@@ -70,10 +111,33 @@ export default function App() {
             </button>
           ))}
         </div>
-        <label className="controls__toggle">
-          <input type="checkbox" checked={saleOnly} onChange={(e) => setSaleOnly(e.target.checked)} />
-          セール中のみ表示
-        </label>
+        <div className="controls__filters">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="ゲーム名で検索"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <select className="genre-select" value={genre} onChange={(e) => setGenre(e.target.value)}>
+            <option value="">すべてのジャンル</option>
+            {ALL_GENRES.map((g) => (
+              <option key={g} value={g}>
+                {g}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="controls__toggles">
+          <label className="controls__toggle">
+            <input type="checkbox" checked={saleOnly} onChange={(e) => setSaleOnly(e.target.checked)} />
+            セール中のみ表示
+          </label>
+          <label className="controls__toggle">
+            <input type="checkbox" checked={showHidden} onChange={(e) => setShowHidden(e.target.checked)} />
+            興味なしを表示（{hiddenIds.size}件）
+          </label>
+        </div>
       </div>
 
       {games.length === 0 ? (
@@ -81,7 +145,12 @@ export default function App() {
       ) : (
         <div className="grid">
           {games.map((game) => (
-            <GameCard key={game.appid} game={game} />
+            <GameCard
+              key={game.appid}
+              game={game}
+              hidden={hiddenIds.has(game.appid)}
+              onToggleHidden={() => toggleHidden(game.appid)}
+            />
           ))}
         </div>
       )}
