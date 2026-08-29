@@ -147,8 +147,9 @@ export default function App() {
             <input type="checkbox" checked={showHidden} onChange={(e) => setShowHidden(e.target.checked)} />
             興味なしを表示（{hiddenIds.size}件）
           </label>
-          <label className="controls__toggle">
+          <label className="toggle-switch">
             <input type="checkbox" checked={showGraph} onChange={(e) => setShowGraph(e.target.checked)} />
+            <span className="toggle-switch__track" />
             価格推移グラフを表示
           </label>
         </div>
