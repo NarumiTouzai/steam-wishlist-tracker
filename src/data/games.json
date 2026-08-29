@@ -1,88 +1,284 @@
 {
-  "updatedAt": "2026-08-29T16:13:43.015Z",
+  "updatedAt": "2026-08-29T16:41:10.280Z",
   "sourceChannelId": "1523002540302667879",
-  "totalCandidates": 3,
+  "totalCandidates": 10,
   "unavailableCount": 0,
   "games": [
     {
-      "appid": "1245620",
-      "name": "ELDEN RING",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1787868578",
-      "storeUrl": "https://store.steampowered.com/app/1245620",
-      "releaseDate": "2022年2月24日",
+      "appid": "1574480",
+      "name": "Agent 64: Spies Never Die",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1574480/f281ff155778294664365fbcedc884319ed172fd/header.jpg?t=1786538539",
+      "storeUrl": "https://store.steampowered.com/app/1574480",
+      "releaseDate": "2026年8月11日",
       "comingSoon": false,
       "price": {
         "isFree": false,
         "currency": "JPY",
-        "initial": 902000,
-        "final": 902000,
+        "initial": 277200,
+        "final": 277200,
         "discountPercent": 0
       },
       "reviews": {
         "scoreDesc": "Very Positive",
         "scoreLabelJa": "非常に好評",
-        "totalPositive": 1071501,
-        "totalNegative": 79901,
-        "totalReviews": 1151402,
-        "percentPositive": 93
-      },
-      "discord": {
-        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/000000000000000000",
-        "firstSeenAt": "2026-08-29T16:13:43.014Z"
-      }
-    },
-    {
-      "appid": "1091500",
-      "name": "サイバーパンク2077",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1784714077",
-      "storeUrl": "https://store.steampowered.com/app/1091500",
-      "releaseDate": "2020年12月9日",
-      "comingSoon": false,
-      "price": {
-        "isFree": false,
-        "currency": "JPY",
-        "initial": 877800,
-        "final": 877800,
-        "discountPercent": 0
-      },
-      "reviews": {
-        "scoreDesc": "Very Positive",
-        "scoreLabelJa": "非常に好評",
-        "totalPositive": 847675,
-        "totalNegative": 128449,
-        "totalReviews": 976124,
+        "totalPositive": 740,
+        "totalNegative": 108,
+        "totalReviews": 848,
         "percentPositive": 87
       },
       "discord": {
-        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/000000000000000000",
-        "firstSeenAt": "2026-08-29T16:13:43.015Z"
+        "appid": "1574480",
+        "firstSeenAt": "2026-08-28T15:53:50.413000+00:00",
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1542925185609367643"
       }
     },
     {
-      "appid": "2050650",
-      "name": "BIOHAZARD RE:4",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2050650/header_japanese.jpg?t=1772502922",
-      "storeUrl": "https://store.steampowered.com/app/2050650",
-      "releaseDate": "2023年3月23日",
+      "appid": "2232840",
+      "name": "Garten of Banban",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2232840/2801bf370ff16d2995a1e015159837a9d3cfaa13/header.jpg?t=1784296804",
+      "storeUrl": "https://store.steampowered.com/app/2232840",
+      "releaseDate": "2023年1月6日",
+      "comingSoon": false,
+      "price": {
+        "isFree": true,
+        "discountPercent": 0
+      },
+      "reviews": {
+        "scoreDesc": "Mixed",
+        "scoreLabelJa": "賛否両論",
+        "totalPositive": 7277,
+        "totalNegative": 6178,
+        "totalReviews": 13455,
+        "percentPositive": 54
+      },
+      "discord": {
+        "appid": "2232840",
+        "firstSeenAt": "2026-08-23T15:41:43.737000+00:00",
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1541110198381584404"
+      }
+    },
+    {
+      "appid": "2436940",
+      "name": "セフィリア",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2436940/cb7dc6f4ed2f0012eb557365966be9b69815f7ae/header.jpg?t=1787290452",
+      "storeUrl": "https://store.steampowered.com/app/2436940",
+      "releaseDate": "2026年7月31日",
       "comingSoon": false,
       "price": {
         "isFree": false,
         "currency": "JPY",
-        "initial": 399000,
-        "final": 399000,
+        "initial": 170000,
+        "final": 170000,
+        "discountPercent": 0
+      },
+      "reviews": {
+        "scoreDesc": "Very Positive",
+        "scoreLabelJa": "非常に好評",
+        "totalPositive": 10633,
+        "totalNegative": 653,
+        "totalReviews": 11286,
+        "percentPositive": 94
+      },
+      "discord": {
+        "appid": "2436940",
+        "firstSeenAt": "2026-08-20T13:52:54.236000+00:00",
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1539995648072360098"
+      }
+    },
+    {
+      "appid": "1478500",
+      "name": "Big Walk",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/62eeee1507dbac905e128a62f2ce690550238db0/header.jpg?t=1785911674",
+      "storeUrl": "https://store.steampowered.com/app/1478500",
+      "releaseDate": "2026年8月4日",
+      "comingSoon": false,
+      "price": {
+        "isFree": false,
+        "currency": "JPY",
+        "initial": 230000,
+        "final": 230000,
         "discountPercent": 0
       },
       "reviews": {
         "scoreDesc": "Overwhelmingly Positive",
         "scoreLabelJa": "圧倒的に好評",
-        "totalPositive": 267258,
-        "totalNegative": 7284,
-        "totalReviews": 274542,
-        "percentPositive": 97
+        "totalPositive": 26926,
+        "totalNegative": 1353,
+        "totalReviews": 28279,
+        "percentPositive": 95
       },
       "discord": {
-        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/000000000000000000",
-        "firstSeenAt": "2026-08-29T16:13:43.015Z"
+        "appid": "1478500",
+        "firstSeenAt": "2026-08-10T22:46:33.436000+00:00",
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1536506067675259032"
+      }
+    },
+    {
+      "appid": "4244510",
+      "name": "Pratfall",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4244510/aa5134d11626034935daa974478c834d03d73f54/header.jpg?t=1784880390",
+      "storeUrl": "https://store.steampowered.com/app/4244510",
+      "releaseDate": "2026年4月20日",
+      "comingSoon": false,
+      "price": {
+        "isFree": false,
+        "currency": "JPY",
+        "initial": 88000,
+        "final": 88000,
+        "discountPercent": 0
+      },
+      "reviews": {
+        "scoreDesc": "Very Positive",
+        "scoreLabelJa": "非常に好評",
+        "totalPositive": 2832,
+        "totalNegative": 297,
+        "totalReviews": 3129,
+        "percentPositive": 91
+      },
+      "discord": {
+        "appid": "4244510",
+        "firstSeenAt": "2026-07-20T13:56:34.789000+00:00",
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1528762549305086053"
+      }
+    },
+    {
+      "appid": "3583210",
+      "name": "クラッシュアウトクル",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3583210/b4a0a892ffb9b1fa2a89881624877847a25f4ab7/header_japanese.jpg?t=1785949243",
+      "storeUrl": "https://store.steampowered.com/app/3583210",
+      "releaseDate": "2026年5月28日",
+      "comingSoon": false,
+      "price": {
+        "isFree": false,
+        "currency": "JPY",
+        "initial": 92000,
+        "final": 57000,
+        "discountPercent": 38
+      },
+      "reviews": {
+        "scoreDesc": "Very Positive",
+        "scoreLabelJa": "非常に好評",
+        "totalPositive": 1092,
+        "totalNegative": 78,
+        "totalReviews": 1170,
+        "percentPositive": 93
+      },
+      "discord": {
+        "appid": "3583210",
+        "firstSeenAt": "2026-07-12T13:11:48.109000+00:00",
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1525852177627615272"
+      }
+    },
+    {
+      "appid": "512900",
+      "name": "Streets of Rogue",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/512900/header.jpg?t=1758274145",
+      "storeUrl": "https://store.steampowered.com/app/512900",
+      "releaseDate": "2019年7月12日",
+      "comingSoon": false,
+      "price": {
+        "isFree": false,
+        "currency": "JPY",
+        "initial": 230000,
+        "final": 230000,
+        "discountPercent": 0
+      },
+      "reviews": {
+        "scoreDesc": "Overwhelmingly Positive",
+        "scoreLabelJa": "圧倒的に好評",
+        "totalPositive": 22128,
+        "totalNegative": 913,
+        "totalReviews": 23041,
+        "percentPositive": 96
+      },
+      "discord": {
+        "appid": "512900",
+        "firstSeenAt": "2026-07-05T02:48:01.518000+00:00",
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1523158484068204735"
+      }
+    },
+    {
+      "appid": "958520",
+      "name": "33 Immortals",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/958520/e39894b763c81766e78374545e78dcff03bcdd4e/header.jpg?t=1784724654",
+      "storeUrl": "https://store.steampowered.com/app/958520",
+      "releaseDate": "2026年6月10日",
+      "comingSoon": false,
+      "price": {
+        "isFree": false,
+        "currency": "JPY",
+        "initial": 188700,
+        "final": 188700,
+        "discountPercent": 0
+      },
+      "reviews": {
+        "scoreDesc": "Mostly Positive",
+        "scoreLabelJa": "やや好評",
+        "totalPositive": 1691,
+        "totalNegative": 635,
+        "totalReviews": 2326,
+        "percentPositive": 73
+      },
+      "discord": {
+        "appid": "958520",
+        "firstSeenAt": "2026-07-04T16:29:16.357000+00:00",
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1523002769856794624"
+      }
+    },
+    {
+      "appid": "2445690",
+      "name": "Lost Castle 2",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2445690/f6619cdbb283b34d8fc5bdd12472127a2efd0866/header.jpg?t=1786601696",
+      "storeUrl": "https://store.steampowered.com/app/2445690",
+      "releaseDate": "2026年6月10日",
+      "comingSoon": false,
+      "price": {
+        "isFree": false,
+        "currency": "JPY",
+        "initial": 200000,
+        "final": 200000,
+        "discountPercent": 0
+      },
+      "reviews": {
+        "scoreDesc": "Mostly Positive",
+        "scoreLabelJa": "やや好評",
+        "totalPositive": 10736,
+        "totalNegative": 3064,
+        "totalReviews": 13800,
+        "percentPositive": 78
+      },
+      "discord": {
+        "appid": "2445690",
+        "firstSeenAt": "2026-07-04T16:28:48.007000+00:00",
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1523002650948538379"
+      }
+    },
+    {
+      "appid": "1167630",
+      "name": "Teardown",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1167630/9372e21ac8ec66b087400abe2b9150d378f6e52f/header_alt_assets_7.jpg?t=1786967199",
+      "storeUrl": "https://store.steampowered.com/app/1167630",
+      "releaseDate": "2022年4月21日",
+      "comingSoon": false,
+      "price": {
+        "isFree": false,
+        "currency": "JPY",
+        "initial": 396000,
+        "final": 396000,
+        "discountPercent": 0
+      },
+      "reviews": {
+        "scoreDesc": "Overwhelmingly Positive",
+        "scoreLabelJa": "圧倒的に好評",
+        "totalPositive": 129827,
+        "totalNegative": 5636,
+        "totalReviews": 135463,
+        "percentPositive": 96
+      },
+      "discord": {
+        "appid": "1167630",
+        "firstSeenAt": "2026-07-04T16:28:31.396000+00:00",
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/1523002581276823632"
       }
     }
   ]
