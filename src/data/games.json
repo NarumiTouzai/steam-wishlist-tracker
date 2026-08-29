@@ -1,0 +1,89 @@
+{
+  "updatedAt": "2026-08-29T16:13:43.015Z",
+  "sourceChannelId": "1523002540302667879",
+  "totalCandidates": 3,
+  "unavailableCount": 0,
+  "games": [
+    {
+      "appid": "1245620",
+      "name": "ELDEN RING",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1787868578",
+      "storeUrl": "https://store.steampowered.com/app/1245620",
+      "releaseDate": "2022年2月24日",
+      "comingSoon": false,
+      "price": {
+        "isFree": false,
+        "currency": "JPY",
+        "initial": 902000,
+        "final": 902000,
+        "discountPercent": 0
+      },
+      "reviews": {
+        "scoreDesc": "Very Positive",
+        "scoreLabelJa": "非常に好評",
+        "totalPositive": 1071501,
+        "totalNegative": 79901,
+        "totalReviews": 1151402,
+        "percentPositive": 93
+      },
+      "discord": {
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/000000000000000000",
+        "firstSeenAt": "2026-08-29T16:13:43.014Z"
+      }
+    },
+    {
+      "appid": "1091500",
+      "name": "サイバーパンク2077",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1784714077",
+      "storeUrl": "https://store.steampowered.com/app/1091500",
+      "releaseDate": "2020年12月9日",
+      "comingSoon": false,
+      "price": {
+        "isFree": false,
+        "currency": "JPY",
+        "initial": 877800,
+        "final": 877800,
+        "discountPercent": 0
+      },
+      "reviews": {
+        "scoreDesc": "Very Positive",
+        "scoreLabelJa": "非常に好評",
+        "totalPositive": 847675,
+        "totalNegative": 128449,
+        "totalReviews": 976124,
+        "percentPositive": 87
+      },
+      "discord": {
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/000000000000000000",
+        "firstSeenAt": "2026-08-29T16:13:43.015Z"
+      }
+    },
+    {
+      "appid": "2050650",
+      "name": "BIOHAZARD RE:4",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2050650/header_japanese.jpg?t=1772502922",
+      "storeUrl": "https://store.steampowered.com/app/2050650",
+      "releaseDate": "2023年3月23日",
+      "comingSoon": false,
+      "price": {
+        "isFree": false,
+        "currency": "JPY",
+        "initial": 399000,
+        "final": 399000,
+        "discountPercent": 0
+      },
+      "reviews": {
+        "scoreDesc": "Overwhelmingly Positive",
+        "scoreLabelJa": "圧倒的に好評",
+        "totalPositive": 267258,
+        "totalNegative": 7284,
+        "totalReviews": 274542,
+        "percentPositive": 97
+      },
+      "discord": {
+        "messageUrl": "https://discord.com/channels/1219991260580941824/1523002540302667879/000000000000000000",
+        "firstSeenAt": "2026-08-29T16:13:43.015Z"
+      }
+    }
+  ]
+}
