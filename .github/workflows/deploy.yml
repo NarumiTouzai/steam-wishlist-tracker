@@ -2,8 +2,9 @@ name: Fetch data & deploy to GitHub Pages
 
 on:
   schedule:
-    # 毎日09:00 JST (00:00 UTC) にSteamの価格・評価を取得し直して再デプロイする
-    - cron: '0 0 * * *'
+    # 毎日00:05 JST (前日15:05 UTC) にSteamの価格・評価を取得し直して再デプロイする
+    # 毎時ちょうど(0分)はGitHub Actions全体で混雑しやすいため、5分ずらしている
+    - cron: '5 15 * * *'
   push:
     branches: [main]
   workflow_dispatch: {}
