@@ -52,7 +52,7 @@ npm run dev
    - `DISCORD_CHANNEL_ID`
    - `DISCORD_GUILD_ID`（任意。メッセージへのリンク生成に使用。省略時はリンクが `@me` 基準になる）
 3. **Settings → Pages** の **Source** を **GitHub Actions** に設定
-4. `main` へのpush、または毎日0:00 UTC(09:00 JST)の定期実行で自動的に
+4. `main` へのpush、または毎日15:05 UTC(00:05 JST)の定期実行で自動的に
    データ取得 → ビルド → デプロイが走る（`.github/workflows/deploy.yml`）
 5. 手動実行したい場合は **Actions → Fetch data & deploy to GitHub Pages → Run workflow**
 
