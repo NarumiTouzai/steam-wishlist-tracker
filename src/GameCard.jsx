@@ -13,11 +13,12 @@ function reviewTone(scoreLabelJa) {
   return 'none';
 }
 
-function Sparkline({ points }) {
+function Sparkline({ points, currency }) {
   if (!points || points.length < 2) return null;
   const values = points.map((p) => p.final);
   const min = Math.min(...values);
   const max = Math.max(...values);
+  const latest = values[values.length - 1];
   const w = 100;
   const h = 24;
   const range = max - min || 1;
@@ -28,9 +29,15 @@ function Sparkline({ points }) {
   });
 
   return (
-    <svg className="sparkline" viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none">
-      <polyline points={coords.join(' ')} fill="none" stroke="var(--accent)" strokeWidth="1.5" />
-    </svg>
+    <div className="sparkline-wrap">
+      <svg className="sparkline" viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none">
+        <polyline points={coords.join(' ')} fill="none" stroke="var(--accent)" strokeWidth="1.5" />
+      </svg>
+      <div className="sparkline-labels">
+        <span>最安 {formatPrice(min, currency)}</span>
+        <span>最新 {formatPrice(latest, currency)}</span>
+      </div>
+    </div>
   );
 }
 
@@ -84,7 +91,7 @@ export default function GameCard({ game, hidden, onToggleHidden, showGraph }) {
             <p className="game-card__history-pending">価格推移: 記録中（データが貯まり次第グラフ表示）</p>
           )}
 
-          {showGraph && <Sparkline points={priceHistory?.points} />}
+          {showGraph && <Sparkline points={priceHistory?.points} currency={price?.currency} />}
 
           {reviews && (
             <div className={`review review--${tone}`}>
