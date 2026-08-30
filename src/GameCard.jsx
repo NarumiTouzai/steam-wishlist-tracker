@@ -45,11 +45,9 @@ export default function GameCard({ game, hidden, onToggleHidden, showGraph }) {
   const { name, headerImage, storeUrl, price, reviews, comingSoon, releaseDate, genres, priceHistory } = game;
   const onSale = price && !price.isFree && price.discountPercent > 0;
   const tone = reviewTone(reviews?.scoreLabelJa);
+  const hasPriceMoved = priceHistory?.points?.some((p) => p.final > priceHistory.lowestFinal);
   const isAllTimeLow =
-    price &&
-    !price.isFree &&
-    priceHistory?.points?.length >= 2 &&
-    price.final <= priceHistory.lowestFinal;
+    price && !price.isFree && hasPriceMoved && price.final <= priceHistory.lowestFinal;
 
   return (
     <div className={`game-card ${hidden ? 'game-card--hidden' : ''}`}>
@@ -81,7 +79,7 @@ export default function GameCard({ game, hidden, onToggleHidden, showGraph }) {
             )}
           </div>
 
-          {priceHistory?.points?.length >= 2 && !isAllTimeLow && (
+          {hasPriceMoved && !isAllTimeLow && (
             <p className="game-card__lowest">
               過去最安値: {formatPrice(priceHistory.lowestFinal, price?.currency)}
             </p>
