@@ -11,7 +11,8 @@
       }
     ],
     "lowestFinal": 230000,
-    "lowestDate": "2026-08-29"
+    "lowestDate": "2026-08-29",
+    "highestFinal": 230000
   },
   "958520": {
     "points": [
@@ -25,7 +26,8 @@
       }
     ],
     "lowestFinal": 188700,
-    "lowestDate": "2026-08-29"
+    "lowestDate": "2026-08-29",
+    "highestFinal": 188700
   },
   "1167630": {
     "points": [
@@ -39,7 +41,8 @@
       }
     ],
     "lowestFinal": 396000,
-    "lowestDate": "2026-08-29"
+    "lowestDate": "2026-08-29",
+    "highestFinal": 396000
   },
   "1478500": {
     "points": [
@@ -53,7 +56,8 @@
       }
     ],
     "lowestFinal": 230000,
-    "lowestDate": "2026-08-29"
+    "lowestDate": "2026-08-29",
+    "highestFinal": 230000
   },
   "1574480": {
     "points": [
@@ -67,7 +71,8 @@
       }
     ],
     "lowestFinal": 277200,
-    "lowestDate": "2026-08-29"
+    "lowestDate": "2026-08-29",
+    "highestFinal": 277200
   },
   "2436940": {
     "points": [
@@ -81,7 +86,8 @@
       }
     ],
     "lowestFinal": 170000,
-    "lowestDate": "2026-08-29"
+    "lowestDate": "2026-08-29",
+    "highestFinal": 170000
   },
   "2445690": {
     "points": [
@@ -95,7 +101,8 @@
       }
     ],
     "lowestFinal": 200000,
-    "lowestDate": "2026-08-29"
+    "lowestDate": "2026-08-29",
+    "highestFinal": 200000
   },
   "3583210": {
     "points": [
@@ -109,7 +116,8 @@
       }
     ],
     "lowestFinal": 57000,
-    "lowestDate": "2026-08-29"
+    "lowestDate": "2026-08-29",
+    "highestFinal": 57000
   },
   "4244510": {
     "points": [
@@ -123,6 +131,7 @@
       }
     ],
     "lowestFinal": 88000,
-    "lowestDate": "2026-08-29"
+    "lowestDate": "2026-08-29",
+    "highestFinal": 88000
   }
 }
