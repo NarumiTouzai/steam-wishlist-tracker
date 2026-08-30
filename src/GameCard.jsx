@@ -45,7 +45,7 @@ export default function GameCard({ game, hidden, onToggleHidden, showGraph }) {
   const { name, headerImage, storeUrl, price, reviews, comingSoon, releaseDate, genres, priceHistory } = game;
   const onSale = price && !price.isFree && price.discountPercent > 0;
   const tone = reviewTone(reviews?.scoreLabelJa);
-  const hasPriceMoved = priceHistory?.points?.some((p) => p.final > priceHistory.lowestFinal);
+  const hasPriceMoved = priceHistory && priceHistory.highestFinal > priceHistory.lowestFinal;
   const isAllTimeLow =
     price && !price.isFree && hasPriceMoved && price.final <= priceHistory.lowestFinal;
 

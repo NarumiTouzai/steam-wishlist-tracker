@@ -31,7 +31,7 @@ export function updateHistory(history, games) {
   for (const game of games) {
     if (!game.price || game.price.isFree || game.price.final == null) continue;
     const key = String(game.appid);
-    const entry = history[key] ?? { points: [], lowestFinal: null, lowestDate: null };
+    const entry = history[key] ?? { points: [], lowestFinal: null, lowestDate: null, highestFinal: null };
     const last = entry.points[entry.points.length - 1];
 
     if (last && last.date === today) {
@@ -44,6 +44,9 @@ export function updateHistory(history, games) {
     if (entry.lowestFinal == null || game.price.final < entry.lowestFinal) {
       entry.lowestFinal = game.price.final;
       entry.lowestDate = today;
+    }
+    if (entry.highestFinal == null || game.price.final > entry.highestFinal) {
+      entry.highestFinal = game.price.final;
     }
 
     history[key] = entry;
@@ -64,6 +67,7 @@ export function attachHistory(history, game) {
       points: entry.points,
       lowestFinal: entry.lowestFinal,
       lowestDate: entry.lowestDate,
+      highestFinal: entry.highestFinal,
     },
   };
 }
