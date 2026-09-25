@@ -337,11 +337,11 @@
       },
       {
         "date": "2026-09-25",
-        "final": 396000
+        "final": 198000
       }
     ],
-    "lowestFinal": 396000,
-    "lowestDate": "2026-08-29",
+    "lowestFinal": 198000,
+    "lowestDate": "2026-09-25",
     "highestFinal": 396000
   },
   "1478500": {
