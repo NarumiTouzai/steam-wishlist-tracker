@@ -36,12 +36,18 @@ async function fetchJsonWithRetry(url, { retries = 3, delayMs = 1500 } = {}) {
   throw new Error(`リトライ上限に達しました: ${url}`);
 }
 
-async function fetchAppDetails(appid) {
+async function fetchAppDetails(appid, { retries = 3, delayMs = 1500 } = {}) {
   const url = `${APPDETAILS_URL}?appids=${appid}&cc=jp&l=japanese`;
-  const json = await fetchJsonWithRetry(url);
-  const entry = json[appid];
-  if (!entry?.success) return null;
-  return entry.data;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const json = await fetchJsonWithRetry(url);
+    // Steamはリクエストしたappidとは違う番号をレスポンスのキーにすることがある
+    // （関連IDへの内部的な紐付けなど）ため、キー名ではなく中身を直接取り出す。
+    // 1リクエストにつきappidは1件しか指定していないので、常に単一のエントリになる。
+    const entry = Object.values(json)[0];
+    if (entry?.success) return entry.data;
+    if (attempt < retries) await sleep(delayMs * (attempt + 1));
+  }
+  return null;
 }
 
 async function fetchAppReviews(appid) {
