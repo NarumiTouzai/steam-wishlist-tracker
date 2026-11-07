@@ -52,8 +52,22 @@ async function fetchAppDetails(appid, { retries = 3, delayMs = 1500 } = {}) {
 
 async function fetchAppReviews(appid) {
   const url = `${APPREVIEWS_URL}/${appid}?json=1&language=all&purchase_type=all&num_per_page=0`;
-  const json = await fetchJsonWithRetry(url);
-  return json.query_summary ?? null;
+  // レビューは付加情報なので、取得できなくても価格更新やデプロイは止めない。
+  // 2026-10-23頃からSteamがこのエンドポイントをストアトップへ302リダイレクトするようになり、
+  // fetchがHTMLを追いかけてJSON.parseで落ちていたため、リダイレクトを追わずJSONかどうかを確認する。
+  try {
+    const res = await fetch(url, { redirect: 'manual' });
+    const type = res.headers.get('content-type') ?? '';
+    if (!res.ok || !type.includes('application/json')) {
+      console.warn(`レビュー取得不可 (${res.status}): appid ${appid}`);
+      return null;
+    }
+    const json = await res.json();
+    return json.query_summary ?? null;
+  } catch (err) {
+    console.warn(`レビュー取得エラー: appid ${appid}: ${err.message}`);
+    return null;
+  }
 }
 
 /**
