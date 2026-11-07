@@ -1,7 +1,10 @@
 // appidごとにSteamストアの価格・セール情報とレビュー概要を取得する。
 // 非公式だが広く使われている公開エンドポイントのみを使用（APIキー不要）。
 const APPDETAILS_URL = 'https://store.steampowered.com/api/appdetails';
-const APPREVIEWS_URL = 'https://store.steampowered.com/appreviews';
+// 旧 store.steampowered.com/appreviews/<appid>?json=1 は2026-10下旬に廃止され、
+// ストアトップへ302リダイレクトするようになったため、後継の公式Web APIを使う（キー不要）。
+// https://partner.steamgames.com/doc/webapi/IUserReviewsService
+const APPREVIEWS_URL = 'https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/';
 
 // Steamが内部的に使うreview_score(0-9)を公式ストアと同じ日本語表記に対応させる
 export const REVIEW_SCORE_LABELS_JA = {
@@ -51,19 +54,14 @@ async function fetchAppDetails(appid, { retries = 3, delayMs = 1500 } = {}) {
 }
 
 async function fetchAppReviews(appid) {
-  const url = `${APPREVIEWS_URL}/${appid}?json=1&language=all&purchase_type=all&num_per_page=0`;
+  // パラメータはinput_jsonで渡す。言語・購入タイプは未指定（=すべて）で旧APIのlanguage=all&purchase_type=allと同じ集計になる。
+  // 集計(query_summary)だけ欲しいので、レビュー本文は最小の1件に絞る。
+  const url = new URL(APPREVIEWS_URL);
+  url.searchParams.set('input_json', JSON.stringify({ appid: Number(appid), num_per_page: 1 }));
   // レビューは付加情報なので、取得できなくても価格更新やデプロイは止めない。
-  // 2026-10-23頃からSteamがこのエンドポイントをストアトップへ302リダイレクトするようになり、
-  // fetchがHTMLを追いかけてJSON.parseで落ちていたため、リダイレクトを追わずJSONかどうかを確認する。
   try {
-    const res = await fetch(url, { redirect: 'manual' });
-    const type = res.headers.get('content-type') ?? '';
-    if (!res.ok || !type.includes('application/json')) {
-      console.warn(`レビュー取得不可 (${res.status}): appid ${appid}`);
-      return null;
-    }
-    const json = await res.json();
-    return json.query_summary ?? null;
+    const json = await fetchJsonWithRetry(url);
+    return json.response?.query_summary ?? null;
   } catch (err) {
     console.warn(`レビュー取得エラー: appid ${appid}: ${err.message}`);
     return null;
